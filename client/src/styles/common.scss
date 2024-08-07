@@ -1,0 +1,68 @@
+/*
+name: 말줄임
+parameter: line(줄 갯수) 
+*/
+@mixin ellipsis ($line: 1) {
+    @if ($line == 1) {
+      overflow: hidden; //넘치는 텍스트를 숨김
+      white-space: nowrap; //텍스트를 한 줄로 유지
+      text-overflow: ellipsis; //넘치는 텍스트 대신 말줄임표를 표시
+    } @else {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-wrap: break-word; //단어가 길어서 줄을 넣을 시, 단어를 잘라서 줄바꿈함. 공백이 없을 때 글자가 짤리는 것을 방지
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: $line; //표시할 라인 수
+    }
+} 
+
+/*
+name: 상위 요소가 position: relative나 absolute 인 경우의 가운데 정렬
+parameter: top(위 아래 정렬 유무)
+*/
+@mixin middle_self_sort_with_position ($top: true) {
+  position: absolute;
+  left: 50%;
+  transform:  translate(-50%, 0);
+
+  @if ($top) {
+    top: 50%;
+    transform:  translate(-50%, -50%); 
+  }
+}
+
+/*
+name: 하위 요소를 flex를 활용해 가운데 정렬
+parameter: top(위 아래 정렬 유무)
+*/
+@mixin middle_child_sort_with_flex ($top: true) {
+  display: flex;
+  justify-content: center;
+
+  @if ($top) {
+    align-items: center;
+  }
+}
+
+/*
+name: 해당 요소의 가로 세로 길이 
+parameter: width(가로) height(세로)
+*/
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+/*
+name: state에 따라 달라지는 배경색
+parameter: state(상태) color1(색상1) color2(색상2)
+*/
+@mixin background_with_state($color1, $color2) {
+  &.true {
+    background-color: $color1;
+  } 
+  &.false {
+    background-color: $color2;
+  }
+}
