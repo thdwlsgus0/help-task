@@ -11,11 +11,10 @@
     "plugin:prettier/recommended"
   ],
   "parserOptions": {
-    "project": "./tsconfig.json"
+    "project": "./client/tsconfig.json"
   },
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "unused-imports/no-unused-imports": "error",
     "react/jsx-key": "error"
   }
 }
