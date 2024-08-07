@@ -1,0 +1,15 @@
+{
+  "devDependencies": {
+    "husky": "8.0.3",
+    "lint-staged": "^15.2.8"
+  },
+  "scripts": {
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
