@@ -7,7 +7,7 @@
     "postinstall": "husky install"
   },
   "lint-staged": {
-    "/**/*.{ts,tsx}": [
+    "client/**/*.{ts,tsx}": [
       "eslint --fix",
       "prettier --write"
     ]
