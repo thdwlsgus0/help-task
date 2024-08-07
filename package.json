@@ -1,0 +1,17 @@
+{
+  "devDependencies": {
+    "eslint": "8",
+    "husky": "8.0.3",
+    "lint-staged": "^15.2.8",
+    "prettier": "^3.3.3"
+  },
+  "scripts": {
+    "postinstall": "husky install"
+  },
+  "lint-staged": {
+    "client/**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
+}
