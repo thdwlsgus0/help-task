@@ -1,0 +1,63 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css");
+
+html {
+  font-family: "sf pro display", "sf pro icons", "helvetica neue", helvetica,
+    arial, sans-serif;
+}
+
+* {
+  font-family: "Pretendard";
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow: auto;
+  margin: 0 auto;
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
+    a, dl, dt, dd, ol, ul, li, form, label, table, figure, em, i, address {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+	cursor: pointer;
+}
+
+input {
+  :focus {
+    outline: none;
+  }
+}
+
+a:active,a:hover {
+	outline: 0;
+} 
+
+dl,ul,ol,menu,li {
+	list-style: none;
+} 
+
+hr {
+	border: none;
+	box-sizing: border-box; 
+} 
+
+button {
+  border:0 none;
+  background-color:transparent;
+  cursor:pointer
+} 
+
+

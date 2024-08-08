@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@styles/global.scss";
+import classnames from "classnames/bind";
+import $ from "./layout.module.scss";
+import { isMobile } from "react-device-detect";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,9 +14,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const cn = classnames.bind($);
+
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ko">
+      <body>
+        <div className={cn({ [$.isMobile]: !isMobile })}>{children}</div>
+      </body>
     </html>
   );
 }
