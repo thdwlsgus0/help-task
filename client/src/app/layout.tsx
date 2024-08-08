@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "../styles/global.scss";
+import "@styles/global.scss";
 import classnames from "classnames/bind";
 import $ from "./layout.module.scss";
 import { isMobile } from "react-device-detect";
