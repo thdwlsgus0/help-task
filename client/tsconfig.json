@@ -19,7 +19,7 @@
       }
     ],
     "paths": {
-      "@apis*": ["./apis/*"],
+      "@apis/*": ["./apis/*"],
       "@app/*": ["./app/*"],
       "@components/*" : ["./components/*"],
       "@constants/*" : ["./constants/*"],
