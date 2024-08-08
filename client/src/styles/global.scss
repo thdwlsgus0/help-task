@@ -23,7 +23,7 @@ html {
 }
 
 html, body, div, span, h1, h2, h3, h4, h5, h6, p, 
-    a, dl, dt, dd, ol, ul, li, form, label, table, figure {
+    a, dl, dt, dd, ol, ul, li, form, label, table, figure, em, i, address {
   margin: 0;
   padding: 0;
   border: 0;
@@ -32,9 +32,32 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p,
 a{
   text-decoration: none;
   color: inherit;
+	cursor: pointer;
 }
 
-button { 
-  border: 0;   
-  cursor: pointer;
+input {
+  :focus {
+    outline: none;
+  }
+}
+
+a:active,a:hover {
+	outline: 0;
 } 
+
+dl,ul,ol,menu,li {
+	list-style: none;
+} 
+
+hr {
+	border: none;
+	box-sizing: border-box; 
+} 
+
+button {
+  border:0 none;
+  background-color:transparent;
+  cursor:pointer
+} 
+
+
