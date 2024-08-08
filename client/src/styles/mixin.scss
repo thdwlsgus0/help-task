@@ -18,25 +18,10 @@ parameter: line(줄 갯수)
 } 
 
 /*
-name: 상위 요소가 position: relative나 absolute 인 경우의 가운데 정렬
-parameter: top(위 아래 정렬 유무)
-*/
-@mixin middle_self_sort_with_position ($top: true) {
-  position: absolute;
-  left: 50%;
-  transform:  translate(-50%, 0);
-
-  @if ($top) {
-    top: 50%;
-    transform:  translate(-50%, -50%); 
-  }
-}
-
-/*
 name: 하위 요소를 flex를 활용해 가운데 정렬
 parameter: top(위 아래 정렬 유무)
 */
-@mixin middle_child_sort_with_flex ($top: true) {
+@mixin centerPosition ($top: true) {
   display: flex;
   justify-content: center;
 
@@ -58,11 +43,23 @@ parameter: width(가로) height(세로)
 name: state에 따라 달라지는 배경색
 parameter: state(상태) color1(색상1) color2(색상2)
 */
-@mixin background_with_state($color1, $color2) {
+@mixin background_with_state($beforeColor, $afterColor) {
   &.true {
-    background-color: $color1;
+    background-color: $beforeColor;
   } 
   &.false {
-    background-color: $color2;
+    background-color: $afterColor;
   }
 }
+
+/*
+name: 부모 모두 채우기
+*/
+@mixin absoluteAllZero() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
