@@ -41,9 +41,9 @@ parameter: width(가로) height(세로)
 
 /*
 name: state에 따라 달라지는 배경색
-parameter: state(상태) color1(색상1) color2(색상2)
+parameter: state(상태) beforeColor(바뀌기 전 색상) afterColor(바뀐 색상)
 */
-@mixin background_with_state($beforeColor, $afterColor) {
+@mixin backgroundWithState($beforeColor, $afterColor) {
   &.true {
     background-color: $beforeColor;
   } 
