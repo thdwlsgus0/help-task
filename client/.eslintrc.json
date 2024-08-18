@@ -17,6 +17,8 @@
   "rules": {
     "react/react-in-jsx-scope": "off",
     "react/jsx-key": "error",
-    "@typescript-eslint/no-unused-vars": "off"
+    "@typescript-eslint/no-unused-vars": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "no-param-reassign": 0
   }
 }
