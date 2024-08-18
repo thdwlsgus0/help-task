@@ -9,7 +9,7 @@
     "airbnb",
     "airbnb-typescript",
     "plugin:prettier/recommended"
-  ],
+  ], 
   "parserOptions": {
     "project": "./client/tsconfig.json"
   }, 
