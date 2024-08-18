@@ -17,8 +17,5 @@
     "react/react-in-jsx-scope": "off",
     "react/jsx-key": "error",
     "@typescript-eslint/no-unused-vars": "off"
-  },
-  "error": {
-    "endOfLine": "off"
   }
 }
