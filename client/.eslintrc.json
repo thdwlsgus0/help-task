@@ -9,12 +9,16 @@
     "airbnb",
     "airbnb-typescript",
     "plugin:prettier/recommended"
-  ],
+  ], 
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./client/tsconfig.json"
   }, 
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-key": "error"
+    "react/jsx-key": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@next/next/no-html-link-for-pages": "off",
+    "no-param-reassign": 0
   }
 }
