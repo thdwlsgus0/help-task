@@ -34,8 +34,6 @@ fetcher.interceptors.response.use(
       refreshing = true;
       // 토큰 재발급 (아직 미작성)
       refreshing = false;
-      // 재발급 후 이전 요청 다시 보냄
-      return fetcher.request(error.config);
     }
     // 리프레시 중인 경우 토큰 재발급을 하지 않고 다시 시도
     return fetcher.request(error.config);
